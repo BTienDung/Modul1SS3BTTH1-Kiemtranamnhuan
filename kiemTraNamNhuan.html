@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra nam nhuan</title>
+</head>
+<body>
+    <script>
+        var year = parseInt(prompt('Enter a year'));
+        var kiemTraNhuan = false;
+        let chia4 = year % 4 == 0 ;
+        if (chia4){
+            let chia100 = year % 100 == 0;
+            if(chia100){
+                let  chiacho400 = year % 400 == 0
+                if(chiacho400){
+                    kiemTraNhuan = true;
+                }
+            } else {
+                kiemTraNhuan = true;
+            }
+        }
+        if (kiemTraNhuan){
+            alert(year+ ' la nam nhuan');
+        } else {
+            alert(year+ ' Khong la nam nhuan');
+        }
+    </script>
+</body>
+</html>
